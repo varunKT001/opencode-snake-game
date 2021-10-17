@@ -1,13 +1,76 @@
+:root {
+  --size: 4%;
+  --primary: #413e66;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+  color: var(--primary);
+}
+header {
+  margin: auto;
+}
+main {
+  width: 100%;
+  margin: auto;
+}
+.game-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  border: 5px solid var(--primary);
+  border-radius: 10px;
+}
+.snake-cordinate {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: var(--primary);
+  border-radius: 50%;
+}
+.insect-cordinate {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: url(./images/mouse.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.gameover-container {
+  height: 100vh;
+}
+.gameover-container h1 {
+  font-size: 4rem;
+  color: var(--bs-danger);
+}
+.game-main {
+  height: 100vh;
+}
+@media (max-width: 780px) {
+  .game-container {
+    width: 400px;
+    height: 400px;
+  }
+  .rules-container {
+    width: 75% !important;
+  }
+}
+@media (max-width: 420px) {
+  .game-container {
+    width: 300px;
+    height: 300px;
+  }
+  .rules-container {
+    width: 90% !important;
+  }
 }
