@@ -5,7 +5,7 @@ import Insect from './components/Insect';
 //initial state of snake
 const initialState = {
   pos: [{ left: 20, top: 20 }],
-  speed: 200,
+  speed: 300,
   dir: '',
   score: 0,
 };
