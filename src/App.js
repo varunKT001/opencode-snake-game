@@ -223,10 +223,12 @@ function App() {
   useEffect(() => {
     //move snake every speed ms
     let interval = setInterval(moveSnake, speed);
+    return () => clearInterval(interval);
+  }, [speed]);
+
+  useEffect(() => {
     //track user input
     document.onkeydown = handleKeyPress;
-    //cleanup
-    return () => clearInterval(interval);
   }, []);
 
   if (!playing) {
