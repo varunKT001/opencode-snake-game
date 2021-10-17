@@ -203,10 +203,10 @@ function App() {
   //inc. speed
   const increaseSnakeSpeed = () => {
     setSpeed((prev) => {
-      if (prev <= 25) {
+      if (prev <= 50) {
         return prev;
       }
-      return prev - 25;
+      return prev - 10;
     });
   };
 

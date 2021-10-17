@@ -37,7 +37,7 @@ main {
   height: var(--size);
   background: var(--primary);
   border-radius: 50%;
-  transition: all 0.25s linear;
+  transition: all 0.125s linear;
 }
 .insect-cordinate {
   position: absolute;
